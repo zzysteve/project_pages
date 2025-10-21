@@ -81,7 +81,7 @@
                     <div class="publication-links">
                          <!-- Arxiv PDF link -->
                       <span class="link-block">
-                        <a href="https://arxiv.org/pdf/<ARXIV PAPER ID>.pdf" target="_blank"
+                        <a href="https://arxiv.org/pdf/2505.11013.pdf" target="_blank"
                         class="external-link button is-normal is-rounded is-dark">
                         <span class="icon">
                           <i class="fas fa-file-pdf"></i>
@@ -90,20 +90,9 @@
                       </a>
                     </span>
 
-                    <!-- Supplementary PDF link -->
-                    <span class="link-block">
-                      <a href="static/pdfs/supplementary_material.pdf" target="_blank"
-                      class="external-link button is-normal is-rounded is-dark">
-                      <span class="icon">
-                        <i class="fas fa-file-pdf"></i>
-                      </span>
-                      <span>Supplementary</span>
-                    </a>
-                  </span>
-
                   <!-- Github link -->
                   <span class="link-block">
-                    <a href="https://github.com/YOUR REPO HERE" target="_blank"
+                    <a href="https://github.com/zzysteve/MoMADiff" target="_blank"
                     class="external-link button is-normal is-rounded is-dark">
                     <span class="icon">
                       <i class="fab fa-github"></i>
@@ -114,7 +103,7 @@
 
                 <!-- ArXiv abstract Link -->
                 <span class="link-block">
-                  <a href="https://arxiv.org/abs/<ARXIV PAPER ID>" target="_blank"
+                  <a href="https://arxiv.org/abs/2505.11013" target="_blank"
                   class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                     <i class="ai ai-arxiv"></i>
@@ -135,14 +124,11 @@
 <section class="hero teaser">
   <div class="container is-max-desktop">
     <div class="hero-body">
-      <video poster="" id="tree" autoplay controls muted loop height="100%">
+      <video poster="" id="tree" autoplay controls height="100%">
         <!-- Your video here -->
-        <source src="static/videos/banner_video.mp4"
+        <source src="static/videos/momadiff/banner.mp4"
         type="video/mp4">
       </video>
-      <h2 class="subtitle has-text-centered">
-        Aliquam vitae elit ullamcorper tellus egestas pellentesque. Ut lacus tellus, maximus vel lectus at, placerat pretium mi. Maecenas dignissim tincidunt vestibulum. Sed consequat hendrerit nisl ut maximus. 
-      </h2>
     </div>
   </div>
 </section>
@@ -156,7 +142,7 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ullamcorper tellus sed ante aliquam tempus. Etiam porttitor urna feugiat nibh elementum, et tempor dolor mattis. Donec accumsan enim augue, a vulputate nisi sodales sit amet. Proin bibendum ex eget mauris cursus euismod nec et nibh. Maecenas ac gravida ante, nec cursus dui. Vivamus purus nibh, placerat ac purus eget, sagittis vestibulum metus. Sed vestibulum bibendum lectus gravida commodo. Pellentesque auctor leo vitae sagittis suscipit.
+            Generating 3D human motion from text descriptions remains challenging due to the diverse and complex nature of human motion. While existing methods excel within the training distribution, they often struggle with out-of-distribution motions, limiting their applicability in real-world scenarios. Existing VQVAE-based methods often fail to represent novel motions faithfully using discrete tokens, which hampers their ability to generalize beyond seen data. Meanwhile, diffusion-based methods operating on continuous representations often lack fine-grained control over individual frames. To address these challenges, we propose a robust motion generation framework MoMADiff, which combines masked modeling with diffusion processes to generate motion using frame-level continuous representations. Our model supports flexible user-provided keyframe specification, enabling precise control over both spatial and temporal aspects of motion synthesis. MoMADiff demonstrates strong generalization capability on novel text-to-motion datasets with sparse keyframes as motion prompts. Extensive experiments on two held-out datasets and two standard benchmarks show that our method consistently outperforms state-of-the-art models in motion quality, instruction fidelity, and keyframe adherence. The code is available at: https://github.com/zzysteve/MoMADiff.
           </p>
         </div>
       </div>
@@ -166,95 +152,105 @@
 <!-- End paper abstract -->
 
 
-<!-- Image carousel -->
+<!-- Motivation section -->
 <section class="hero is-small">
   <div class="hero-body">
     <div class="container">
-      <div id="results-carousel" class="carousel results-carousel">
-       <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/carousel1.jpg" alt="MY ALT TEXT"/>
-        <h2 class="subtitle has-text-centered">
-          First image description.
-        </h2>
-      </div>
-      <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/carousel2.jpg" alt="MY ALT TEXT"/>
-        <h2 class="subtitle has-text-centered">
-          Second image description.
-        </h2>
-      </div>
-      <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/carousel3.jpg" alt="MY ALT TEXT"/>
-        <h2 class="subtitle has-text-centered">
-         Third image description.
-       </h2>
-     </div>
-     <div class="item">
-      <!-- Your image here -->
-      <img src="static/images/carousel4.jpg" alt="MY ALT TEXT"/>
-      <h2 class="subtitle has-text-centered">
-        Fourth image description.
-      </h2>
-    </div>
-  </div>
-</div>
-</div>
-</section>
-<!-- End image carousel -->
+      <h2 class="title is-3">Motivation</h2>
+      <div class="columns is-centered">
+        <div class="column is-two-thirds">
+          <div class="columns is-centered">
+            <div class="column is-10">
+              
+              <h3 class="subtitle has-text-centered" style="margin-bottom: 25px;">
+                Existing methods struggle with out-of-distribution motions
+              </h3>
 
+              <div class="columns is-multiline is-centered">
+                
+                <div class="column is-full">
+                  <video poster="" id="motivation-video1" autoplay controls muted loop height="100%">
+                    <source src="static/videos/momadiff/motivation_poor_reconstruction.mp4" type="video/mp4">
+                  </video>
+                  <h3 class="subtitle has-text-centered" style="margin-top: 20px;">
+                    <strong>Inaccurate motion reconstruction</strong>
+                  </h3>
+                </div> <div class="column is-full">
+                  <video poster="" id="motivation-video2" autoplay controls muted loop height="100%">
+                    <source src="static/videos/momadiff/motivation_poor_guidance.mp4" type="video/mp4">
+                  </video>
+                  <h3 class="subtitle has-text-centered" style="margin-top: 20px;">
+                    <strong>Poor keyframe guidance</strong>
+                  </h3>
+                </div>
 
-
-
-<!-- Youtube video -->
-<section class="hero is-small is-light">
-  <div class="hero-body">
-    <div class="container">
-      <!-- Paper video. -->
-      <h2 class="title is-3">Video Presentation</h2>
-      <div class="columns is-centered has-text-centered">
-        <div class="column is-four-fifths">
-          
-          <div class="publication-video">
-            <!-- Youtube embed code here -->
-            <iframe src="https://www.youtube.com/embed/JkaxUblCGz0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </div>
 </section>
-<!-- End youtube video -->
+<!-- End motivation section -->
 
+
+
+<!-- Static image section -->
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container">
+      <h2 class="title is-3">Overview</h2>
+      <div class="columns is-centered">
+        <div class="column is-two-thirds">
+          <img src="static/images/momadiff/overview.jpg" alt="Overview of our method"/>
+          <h2 class="subtitle has-text-centered" style="margin-top: 20px;">
+            Our approach combines a <strong>Motion VAE</strong> for high-fidelity reconstruction with a <strong>masked autoregressive diffusion model</strong> for generation. This design enables realistic motion synthesis and allows for precise control via sparse keyframes.
+          </h2>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End static image section -->
 
 <!-- Video carousel -->
 <section class="hero is-small">
   <div class="hero-body">
     <div class="container">
-      <h2 class="title is-3">Another Carousel</h2>
-      <div id="results-carousel" class="carousel results-carousel">
-        <div class="item item-video1">
-          <video poster="" id="video1" autoplay controls muted loop height="100%">
-            <!-- Your video file here -->
-            <source src="static/videos/carousel1.mp4"
-            type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-video2">
-          <video poster="" id="video2" autoplay controls muted loop height="100%">
-            <!-- Your video file here -->
-            <source src="static/videos/carousel2.mp4"
-            type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-video3">
-          <video poster="" id="video3" autoplay controls muted loop height="100%">\
-            <!-- Your video file here -->
-            <source src="static/videos/carousel3.mp4"
-            type="video/mp4">
-          </video>
+      <h2 class="title is-3">Qualitative Results</h2>
+      <div class="columns is-centered">
+        <div class="column is-three-quarters">
+          <div id="videos-carousel" class="carousel results-carousel">
+            <div class="item item-video1">
+              <video poster="" id="video1" autoplay controls muted loop height="100%">
+                <!-- Your video file here -->
+                <source src="static/videos/momadiff/01_motion_reconstruction.mp4"
+                type="video/mp4">
+              </video>
+            </div>
+            <div class="item item-video2">
+              <video poster="" id="video2" autoplay controls muted loop height="100%">
+                <!-- Your video file here -->
+                <source src="static/videos/momadiff/02_keyframe_guided_generation.mp4"
+                type="video/mp4">
+              </video>
+            </div>
+            <div class="item item-video3">
+              <video poster="" id="video3" autoplay controls muted loop height="100%">
+                <!-- Your video file here -->
+                <source src="static/videos/momadiff/03_ours_applications.mp4"
+                type="video/mp4">
+              </video>
+            </div>
+            <div class="item item-video4">
+              <video poster="" id="video4" autoplay controls muted loop height="100%">
+                <!-- Your video file here -->
+                <source src="static/videos/momadiff/04_ours_on_humanml3d.mp4"
+                type="video/mp4">
+              </video>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -262,12 +258,39 @@
 </section>
 <!-- End video carousel -->
 
+<!-- Static image section -->
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container">
+      <h2 class="title is-3">Quantitative Results</h2>
+      <div class="columns is-centered">
+        <div class="column is-two-thirds">
+          <img src="static/images/momadiff/standard_qual.jpg" alt="Qualitative results on two standard benchmarks."/>
+          <h2 class="subtitle has-text-left" style="margin-top: 20px;">
+            Qualitative results on two standard benchmarks. Our method outperforms existing state-of-the-art approaches on both HumanML3D and KIT-ML benchmarks in terms of motion quality and text-motion fidelity.
+          </h2>
+          <img src="static/images/momadiff/ood_motion_qual.jpg" alt="Quantitative comparison results." style="margin-top: 30px;"/>
+          <h2 class="subtitle has-text-left" style="margin-top: 20px;">
+            Our method demonstrates strong generalization capability on out-of-distribution motions with sparse keyframes as motion prompts, significantly outperforming existing methods.
+          </h2>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End static image section -->
+
 
 <!--BibTex citation -->
   <section class="section" id="BibTeX">
     <div class="container is-max-desktop content">
       <h2 class="title">BibTeX</h2>
-      <pre><code>BibTex Code Here</code></pre>
+      <pre><code>@article{zhang2025towards,
+  title={Towards Robust and Controllable Text-to-Motion via Masked Autoregressive Diffusion},
+  author={Zhang, Zongye and Kong, Bohan and Liu, Qingjie and Wang, Yunhong},
+  journal={arXiv preprint arXiv:2505.11013},
+  year={2025}
+}</code></pre>
     </div>
 </section>
 <!--End BibTex citation -->
